@@ -13,16 +13,14 @@ while True:
       total = 0
     
     elif line == 'STOP':
+      top3 = 0
       for _ in range(3):
         highest = heappop(lst)
-        print(-highest[0])
+        top3 += -highest[0]
+      print(top3)
     
     else:
       total += int(line)
     
   except EOFError:
     break
-
-  
-
-
